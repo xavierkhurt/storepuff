@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="header">
+        <div class="inner_header">
+            <div class="logo_container">
+                <img src="Logo.png" alt="" scrset=""><h1>Puff<span>Store</span></h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="about">
+        <h1>ABOUT</h1>
+        <p>Love vaping? Puff Store has you covered! We offer a wide range
+            of delicious flavors and top brands in disposable vapes, so 
+            you're sure to find what you like. We're passionate about 
+            helping adult smokers find a satisfying alternative to 
+            cigarettes, making vaping a smooth and enjoyable switch. 
+            Puff Store offers the latest vapes, excellent customer service, 
+            and a hassle-free online shopping experience.</p>
+    </div>
+
+    <div class="container" id = "container">
+        <div class="form-container sign-up">
+            <form action="register.php" method="post">
+                <h1>Sign up</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                </div>
+                <span>or create account</span>
+                <input type="Text" name="Firstname" placeholder="First Name">
+                <input type="Text" name="Lastname" placeholder="Last Name">
+                <input type="email" name="Email" placeholder="Email">
+                <input type="password" name="Password" placeholder="Password">
+                <button>Sign Up</button>
+            </form>
+        </div>
+        <div class="form-container sign-in">
+            <form action="login.php" method="post">
+                <h1>Sign in</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                </div>
+                <span>or use your email to sign in</span>
+                <input type="email" name="Email" placeholder="Email">
+                <input type="password" name="Password" placeholder="Password">
+                <a href="#">Forgot your Password?</a>
+                <button>Sign In</button>
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <H1>Already have an account?</H1>
+                    <p>Sign in Here!</p>
+                    <button class="hidden" id="login">Sign In</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <H1>Don't have an Account?</H1>
+                    <p>Register Here!</p>
+                    <button class="hidden" id="register">Sign Up</button>
+                </div>
+            </div>   
+        </div>
+    </div>
+
+    <script>
+
+        const container = document.getElementById('container');
+        const registerBtn = document.getElementById('register');
+        const loginBtn = document.getElementById('login');
+    
+        registerBtn.addEventListener('click', () => 
+        {
+            container.classList.add("active");
+        });
+    
+        loginBtn.addEventListener('click', () => 
+        {
+            container.classList.remove("active");
+        });
+    
+    </script>
+</body>
+</html>

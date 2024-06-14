@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Document</title>
+    <style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, rgb(19, 18, 18), rgb(48, 48, 48));
+    min-height: 100vh;
+}
+img {
+    max-width: 100%;
+    max-height: 100%;
+    width: 80px;
+    padding-top: 10px;
+    margin-right: 5px;
+    margin-left: 10px;
+}
+
+.header {
+    width: 100%;
+    height: 100px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inner_header {
+    width: 1000px;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    transform: translate(40%);
+}
+
+.inner_header .img {
+    width: 50px;
+}
+
+.logo_container {
+    display: flex;
+    align-items: center;
+}
+
+.logo_container h1 {
+    color: white;
+    font-family: 'Sedan';
+    font-size: 32px;
+    font-weight: 200;
+}
+
+.logo_container h1 span {
+    font-weight: 800;
+}
+.checkout-form {
+    margin: 50px auto;
+    padding: 20px;
+    max-width: 900px;
+    transform: translate(-350px, -15px);
+    border: 1px solid;
+    border-radius: 5px;
+    border-color: rgb(48, 48, 48);
+}
+
+.checkout-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.checkout-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.checkout-form input[type="text"],
+.checkout-form input[type="email"],
+.checkout-form textarea,
+.checkout-form select,
+.checkout-form button {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.checkout-form button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.checkout-form button:hover {
+    background-color: #0056b3;
+}
+
+.payment-details {
+    display: none;
+}
+
+.payment-details.show {
+    display: block;
+}
+
+.order-complete {
+    display: none;
+    color: green;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+header .logout {
+    position: relative;
+    text-align: center;
+}
+header .logout .fa-right-from-bracket{
+    color: #fff;
+    font-size: 27px;
+    cursor: pointer;
+    transform: translate(470px, -87px);
+}
+header .home {
+    position: relative;
+    text-align: center;
+}
+header .home .fa-house{
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+    transform: translate(410px, -60px);
+}
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="inner_header">
+            <div class="logo_container">
+                <img src="Logo.png" alt="" scrset=""><h1>Puff<span>Store</span></h1>          
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <div class="shopping">
+        </div>
+        <div class="home">
+            <i class="fa-solid fa-house"></i>
+        </div>
+        <div class="logout">
+            <i class="fa-solid fa-right-from-bracket"></i>
+        </div>
+    </header>
+
+    <div class="checkout-form ">
+        <h2>Checkout Form</h2>
+        <i class="fas fa-times"></i>
+        <form>
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" required>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" required></textarea>
+    
+            <label for="payment">Payment Method:</label>
+            <select id="payment" name="payment" required>
+                <option value="" disabled selected>Select Payment Method</option>
+                <option value="cash">Cash</option>
+                <option value="gcash">GCash</option>
+                <option value="card">Card</option>
+            </select>
+    
+            <div id="card-details" class="payment-details">
+                <label for="card-number">Card Number:</label>
+                <input type="text" id="card-number" name="card-number">
+                <label for="expiry">Expiry Date:</label>
+                <input type="text" id="expiry" name="expiry">
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv">
+            </div>
+    
+            <div id="mobile-details" class="payment-details">
+                <label for="mobile">Mobile Number:</label>
+                <input type="text" id="mobile" name="mobile">
+            </div>
+    
+            <button type="submit" id="confirm">Confirm</button>
+            <div class="order-complete hidden">Order Complete!</div>
+        </form>
+
+
+</body>
+
+<script>
+    const paymentSelect = document.getElementById('payment');
+    const cardDetails = document.getElementById('card-details');
+    const mobileDetails = document.getElementById('mobile-details');
+
+    paymentSelect.addEventListener('change', function () {
+        if (paymentSelect.value === 'card') {
+            cardDetails.classList.add('show');
+            mobileDetails.classList.remove('show');
+        } else if (paymentSelect.value === 'gcash') {
+            cardDetails.classList.remove('show');
+            mobileDetails.classList.add('show');
+        } else {
+            cardDetails.classList.remove('show');
+            mobileDetails.classList.remove('show');
+        }
+    });
+
+    const logoutButton = document.querySelector('.logout');
+logoutButton.addEventListener('click', () => {
+    redirectToSignInSignUp();
+});
+
+function redirectToSignInSignUp() {
+    // Redirect to the sign-in and sign-up page
+    window.location.href = 'index.html';
+}
+
+const homeButton = document.querySelector('.home');
+homeButton.addEventListener('click', () => {
+    redirectToMainPage();
+});
+
+function redirectToMainPage() {
+    // Redirect to the sign-in and sign-up page
+    window.location.href = 'main_page.html';
+}
+</script>
+</html>

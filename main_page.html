@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="main_page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="header">
+        <div class="inner_header">
+            <div class="logo_container">
+                <img src="Logo.png" alt="" scrset=""><h1>Puff<span>Store</span></h1>  
+                <div class="shopping">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <i class="fa-solid fa-right-from-bracket" id="logoutIcon"></i>
+                    <span class="quantity">0</span>
+                </div>        
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="container">
+        <div class="button_filter">
+            <button class="active" name="all">Show All</button>
+            <button data-name="Pastry Vapors">Pastry Vapors</button>
+            <button data-name="Geek Bar">Geek Bar</button>
+            <button data-name="Black">Black</button>
+            <button data-name="Flava">Flava</button>
+            <button data-name="Shift">Shift</button>
+        </div>
+    </div>
+    <div class="filterable_cards">
+        <div class="card" name="p1" data-name="Pastry Vapors">
+            <img src="pastry_1.jpg" alt="pastry vapor">
+            <div class="card_body">
+                <h6 class="card_title">Pastry Vapors x Shift Gripbar</h6>
+                <h5 class="card_price">₱500.00</h5>
+                <p class="card_text">Click here to view the flavors
+                    for GREEK 9000.</p>
+            </div>
+        </div>
+        <div class="card" name="p2" data-name="Pastry Vapors">
+            <img src="pastry_2.jpg" alt="pastry vapor">
+            <div class="card_body">
+                <h6 class="card_title">Pastry Vapors x Aspire</h6>
+                <h5 class="card_price">₱500.00</h5>
+                <p class="card_text">Click here to view the flavors
+                    for GRIPBAR 12000.
+                </p>
+            </div>
+        </div>
+        <div class="card" name="p3" data-name="Pastry Vapors">
+            <img src="pastry_3.jpg" alt="pastry vapor">
+            <div class="card_body">
+                <h6 class="card_title">Pastry Vapors x Shift Level Bar</h6>
+                <h5 class="card_price">₱500.00</h5>
+                <p class="card_text">Click here to view the flavors
+                    for LEVEL BAR 10000.
+                </p>
+            </div>
+        </div>
+        <div class="card" name="p4" data-name="Pastry Vapors">
+            <img src="pastry_4.jpg" alt="pastry vapor">
+            <div class="card_body">
+                <h6 class="card_title">Pastry Vapors</h6>
+                <h5 class="card_price">₱500.00</h5>
+                <p class="card_text">Click here to view the flavors
+                    for COSMOS 15000.
+                </p>
+            </div>
+        </div>
+        <div class="card" name="p5" data-name="Pastry Vapors">
+            <img src="pastry_1.jpg" alt="pastry vapor">
+            <div class="card_body">
+                <h6 class="card_title">Pastry Vapors x Aspire</h6>
+                <h5 class="card_price">₱500.00</h5>
+                <p class="card_text">Click here to view the flavors
+                    for GREEK 9000.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-preview">
+        <div class="preview active" data-target="p1">
+            <i class="fas fa-times"></i>
+            <img src="pastry_1.jpg" alt="">
+            <h3>Pastry Vapors x Shift Gripbar Greek 9000</h3>
+            <h5 class="card_price">₱500.00</h5>
+            <h3>Flavors:</h3>
+            <div id="flavorsList">
+                <button class="flavor-btn" data-flavor="Achilles (RY4 Caramel)">Achilles (RY4 Caramel)</button>
+                <button class="flavor-btn" data-flavor="Ares (Iced Coffee)">Ares (Iced Coffee)</button>
+                <button class="flavor-btn" data-flavor="Cronus (Watermelon Yakult)">Cronus (Watermelon Yakult)</button>
+                <button class="flavor-btn" data-flavor="Hera (Strawberry Milkshake)">Hera (Strawberry Milkshake)</button>
+                <button class="flavor-btn" data-flavor="Poseidon (Iced Bubblegum)">Poseidon (Iced Bubblegum)</button>
+                <button class="flavor-btn" data-flavor="Apollo (Melona Ice)">Apollo (Melona Ice)</button>
+                <button class="flavor-btn" data-flavor="Atlas (Grapes Blackcurrant)">Atlas (Grapes Blackcurrant)</button>
+                <button class="flavor-btn" data-flavor="Demeter (Strawberry Watermelon)">Demeter (Strawberry Watermelon)</button>
+                <button class="flavor-btn" data-flavor="Zeus (Taro Milkshake)">Zeus (Taro Milkshake)</button>
+            </div>
+                <button class="add-to-cart">ADD TO CART</button>
+                <button class="buyBtn">BUY</button>
+            </div>
+
+            <div class="preview active" data-target="p2">
+                <i class="fas fa-times"></i>
+                <img src="pastry_2.jpg" alt="">
+                <h3>Pastry Vapors x Shift Gripbar Greek 9000</h3>
+                <h5 class="card_price">₱500.00</h5>
+                <h3>Flavors:</h3>
+                <div id="flavorsList">
+                    <button class="flavor-btn" data-flavor="Achilles (RY4 Caramel)">Achilles (RY4 Caramel)</button>
+                    <button class="flavor-btn" data-flavor="Ares (Iced Coffee)">Ares (Iced Coffee)</button>
+                    <button class="flavor-btn" data-flavor="Cronus (Watermelon Yakult)">Cronus (Watermelon Yakult)</button>
+                    <button class="flavor-btn" data-flavor="Hera (Strawberry Milkshake)">Hera (Strawberry Milkshake)</button>
+                    <button class="flavor-btn" data-flavor="Poseidon (Iced Bubblegum)">Poseidon (Iced Bubblegum)</button>
+                    <button class="flavor-btn" data-flavor="Apollo (Melona Ice)">Apollo (Melona Ice)</button>
+                    <button class="flavor-btn" data-flavor="Atlas (Grapes Blackcurrant)">Atlas (Grapes Blackcurrant)</button>
+                    <button class="flavor-btn" data-flavor="Demeter (Strawberry Watermelon)">Demeter (Strawberry Watermelon)</button>
+                    <button class="flavor-btn" data-flavor="Zeus (Taro Milkshake)">Zeus (Taro Milkshake)</button>
+                </div>
+                    <button class="add-to-cart">ADD TO CART</button>       
+                    <button class="buyBtn">BUY</button>
+                </div>
+
+                <div class="preview active" data-target="p3">
+                    <i class="fas fa-times"></i>
+                    <img src="pastry_3.jpg" alt="">
+                    <h3>Pastry Vapors x Shift Gripbar Greek 9000</h3>
+                    <h5 class="card_price">₱500.00</h5>
+                    <h3>Flavors:</h3>
+                    <div id="flavorsList">
+                        <button class="flavor-btn" data-flavor="Achilles (RY4 Caramel)">Achilles (RY4 Caramel)</button>
+                        <button class="flavor-btn" data-flavor="Ares (Iced Coffee)">Ares (Iced Coffee)</button>
+                        <button class="flavor-btn" data-flavor="Cronus (Watermelon Yakult)">Cronus (Watermelon Yakult)</button>
+                        <button class="flavor-btn" data-flavor="Hera (Strawberry Milkshake)">Hera (Strawberry Milkshake)</button>
+                        <button class="flavor-btn" data-flavor="Poseidon (Iced Bubblegum)">Poseidon (Iced Bubblegum)</button>
+                        <button class="flavor-btn" data-flavor="Apollo (Melona Ice)">Apollo (Melona Ice)</button>
+                        <button class="flavor-btn" data-flavor="Atlas (Grapes Blackcurrant)">Atlas (Grapes Blackcurrant)</button>
+                        <button class="flavor-btn" data-flavor="Demeter (Strawberry Watermelon)">Demeter (Strawberry Watermelon)</button>
+                        <button class="flavor-btn" data-flavor="Zeus (Taro Milkshake)">Zeus (Taro Milkshake)</button>
+                    </div>
+                        <button class="add-to-cart">ADD TO CART</button>       
+                        <button class="buyBtn">BUY</button>
+                    </div>
+
+                    <div class="preview active" data-target="p4">
+                        <i class="fas fa-times"></i>
+                        <img src="pastry_4.jpg" alt="">
+                        <h3>Pastry Vapors x Shift Gripbar Greek 9000</h3>
+                        <h5 class="card_price">₱500.00</h5>
+                        <h3>Flavors:</h3>
+                        <div id="flavorsList">
+                            <button class="flavor-btn" data-flavor="Achilles (RY4 Caramel)">Achilles (RY4 Caramel)</button>
+                            <button class="flavor-btn" data-flavor="Ares (Iced Coffee)">Ares (Iced Coffee)</button>
+                            <button class="flavor-btn" data-flavor="Cronus (Watermelon Yakult)">Cronus (Watermelon Yakult)</button>
+                            <button class="flavor-btn" data-flavor="Hera (Strawberry Milkshake)">Hera (Strawberry Milkshake)</button>
+                            <button class="flavor-btn" data-flavor="Poseidon (Iced Bubblegum)">Poseidon (Iced Bubblegum)</button>
+                            <button class="flavor-btn" data-flavor="Apollo (Melona Ice)">Apollo (Melona Ice)</button>
+                            <button class="flavor-btn" data-flavor="Atlas (Grapes Blackcurrant)">Atlas (Grapes Blackcurrant)</button>
+                            <button class="flavor-btn" data-flavor="Demeter (Strawberry Watermelon)">Demeter (Strawberry Watermelon)</button>
+                            <button class="flavor-btn" data-flavor="Zeus (Taro Milkshake)">Zeus (Taro Milkshake)</button>
+                        </div>
+                            <button class="add-to-cart">ADD TO CART</button>       
+                            <button class="buyBtn">BUY</button>
+                        </div>
+
+                        <div class="preview active" data-target="p5">
+                            <i class="fas fa-times"></i>
+                            <img src="pastry_1.jpg" alt="">
+                            <h3>Pastry Vapors x Shift Gripbar Greek 9000</h3>
+                            <h5 class="card_price">₱500.00</h5>
+                            <h3>Flavors:</h3>
+                            <div id="flavorsList">
+                                <button class="flavor-btn" data-flavor="Achilles (RY4 Caramel)">Achilles (RY4 Caramel)</button>
+                                <button class="flavor-btn" data-flavor="Ares (Iced Coffee)">Ares (Iced Coffee)</button>
+                                <button class="flavor-btn" data-flavor="Cronus (Watermelon Yakult)">Cronus (Watermelon Yakult)</button>
+                                <button class="flavor-btn" data-flavor="Hera (Strawberry Milkshake)">Hera (Strawberry Milkshake)</button>
+                                <button class="flavor-btn" data-flavor="Poseidon (Iced Bubblegum)">Poseidon (Iced Bubblegum)</button>
+                                <button class="flavor-btn" data-flavor="Apollo (Melona Ice)">Apollo (Melona Ice)</button>
+                                <button class="flavor-btn" data-flavor="Atlas (Grapes Blackcurrant)">Atlas (Grapes Blackcurrant)</button>
+                                <button class="flavor-btn" data-flavor="Demeter (Strawberry Watermelon)">Demeter (Strawberry Watermelon)</button>
+                                <button class="flavor-btn" data-flavor="Zeus (Taro Milkshake)">Zeus (Taro Milkshake)</button>
+                            </div>
+                                <button class="add-to-cart">ADD TO CART</button>        
+                                <button class="buyBtn">BUY</button>
+                            </div>
+    </div>
+
+
+
+    <div class="cart-container">
+        <div class="list"></div>
+    </div>
+    <div class="cart-card">
+        <h1>CART</h1>
+        <div class="closeShopping"><i class="fas fa-times"></i></div>  
+        <ul class="cart-items"></ul>
+
+        <div class="checkOut">
+            <div class="checkout">CHECK OUT</div>
+            <div>Total: ₱<span class="total">0</span></div>
+        </div>  
+    </div>
+
+<div class="row">
+    <div class="col-75">
+        <div class="checkout-container">
+            <i class="fas fa-times"></i>
+            <form action="/action_page.php">
+                <div class="row">
+                    <div class="col-50">
+                        <h3>Billing Address</h3>
+                        <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+                        <input type="text" id="fname" name="firstname" placeholder="John M. Doe" required>
+                        <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                        <input type="text" id="email" name="email" placeholder="john@example.com" required>
+                        <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+                        <input type="text" id="adr" name="address" placeholder="542 W. 15th Street" required>
+                    </div>
+                    <div class="col-50">
+                        <h3>Payment</h3>
+                        <label for="payment">Payment Method:</label>
+                        <select id="payment" name="payment" required>
+                            <option value="" disabled selected>Select Payment Method</option>
+                            <option value="cash">Cash</option>
+                            <option value="gcash">GCash</option>
+                            <option value="card">Card</option>
+                        </select>
+                
+                        <div id="card-details" class="payment-details">
+                            <label for="card-number">Card Number:</label>
+                            <input type="text" id="card-number" name="card-number">
+                            <label for="expiry">Expiry Date:</label>
+                            <input type="text" id="expiry" name="expiry">
+                            <label for="cvv">CVV:</label>
+                            <input type="text" id="cvv" name="cvv">
+                        </div>
+                
+                        <div id="mobile-details" class="payment-details">
+                            <label for="mobile">Mobile Number:</label>
+                            <input type="text" id="mobile" name="mobile">
+                        </div>
+                    </div>
+                </div>
+                <label>
+                    <input type="checkbox" checked="checked" name="sameadr">
+                    <span style="display: inline-block; margin-top: 10px;">Shipping address same as billing</span>
+                </label>
+                
+                <input type="submit" value="Confirm" class="btn" id="confirmOrder">
+                
+            </form>
+        </div>
+    </div>
+</div>
+    
+    <script src="main_page.js"></script>
+    
+</body>
+</html>
